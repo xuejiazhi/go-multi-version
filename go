@@ -28,7 +28,7 @@ do
          "14")
            unset GOROOT
            /usr/local/go1.14/bin/go env -w GOROOT="/usr/local/go1.14"
-           export GOROOT=/usr/local/go1.18/
+           export GOROOT=/usr/local/go1.14/
            /usr/local/go1.14/bin/go "${@:3}"
            Run_Flag=1
            ;;
