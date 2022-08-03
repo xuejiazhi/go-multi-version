@@ -36,5 +36,14 @@ do
      ?)
        echo "you param is error!"
          ;;
+    esac
+ done
+ 
+ if [ $Run_Flag -eq 0 ]; then
+    unset GOROOT
+    /usr/local/go${Default_Version}/bin/go env -v GOROOT="/usr/local/go${Default_Version}"
+    export GOROOT=/usr/local/go${Default_Version}/
+    /usr/local/go${Default_Version}/bin/go "${@:1}"
+ fi
      
    
